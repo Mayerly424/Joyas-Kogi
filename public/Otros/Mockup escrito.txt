@@ -1,0 +1,24 @@
+Inicio, colecciones, nosotros, contactanos, iniciar sesión (Perfil)
+
+Colecciones (Un filtro de todo, como por ejemplo: aretes, anillos, collares, pulseras, complementos, bienestar. Regalos (Personalizadas o par alguien de la familia) mas comprados, descuentos del 10, 20, 50 %. Por precio entre 50mil y 1 millon. Material: Oro, plata, Cobre, platino, Acero, Titanio, Tungsteno. si filtro anillo de oro que aprescan los anillos y si digamos pongo un precio de 20 mil y no hay ninguno pos diga no se encontraron resultados  )
+Perfil (Nuevo menu de servicios donde se ofrecen citas para la personalización de la joya, tambien algo como limpieza, reparación )
+
+
+Inicio 
+
+
+
+Descuentos 
+   |
+   |
+<  |
+   |
+   |
+
+
+
+ROLEEES
+
+AUTOMATICOS (es decir que utomaticamente el empleado ingresa a la empresa se le genera un usuario y una contraseña que el mismo debe cambiar por seguridad, sin embrago puede seleccionar similar al sena el tipo de rol con el que este trabajando digamos es empleado entonces va a gestionar si quiere ser un usario o si quiere gestionar las citas que tenga o los productos que esten pendientes, en cuanto al administrador toda su interfaz es diferente el tambien inicia sesión como digamos  >Administrador - >Usuario (Si seleccciona administrador pero no tiene cuenta de adminisrador le aparece un mensaje que diga este usuario no existe, sin embargo como el administrador si podria adquirir productos podra ingresar tanto como usuario como administrador, su interfas es diferente porque puede corregir los textos, el catalogo, la galeria, las imagenes, y las redes que manejen))
+
+Todos pueden acceder a la pagina sin embrago para realizar compras o gestionar las citas y productos (O en caso del administrador realizar cambios) si es necesario iniciar sesión
