@@ -1,0 +1,226 @@
+/* Estilos específicos para la página Nosotros */
+body {
+    background-color: #f2eae5;
+    /* Color de fondo beige */
+}
+
+.Nosotros {
+    background-color: #f2eae5;
+    /* Color de fondo café claro */
+    padding: 80px 15px;
+    /* Añadido padding lateral para mejorar la responsividad */
+    text-align: center;
+}
+
+.about-section {
+    background-color: rgba(120, 69, 2, 0.457);
+    /* Color de fondo café claro */
+    padding: 4px 10px 8px 10px;
+    /* Añadido padding lateral para mejorar la responsividad */
+    text-align: center;
+    margin: 40px;
+}
+
+.timeline {
+    position: relative;
+    margin: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #ad7d4c;
+    /* Color dorado */
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: #ad7d4c;
+    /* Color dorado */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #ffffff;
+}
+
+.timeline-content {
+    width: 100%;
+    /* Utilizar el 100% del ancho en dispositivos pequeños */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 20px;
+    /* Espacio entre elementos */
+}
+
+.timeline-content h3 {
+    color: #ad7d4c;
+    /* Color dorado oscuro */
+}
+
+.timeline-content p {
+    color: #6c5846;
+    /* Color café oscuro */
+}
+
+.timeline-content .timeline-date {
+    color: #6c5846;
+    /* Color café oscuro */
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.timeline-content:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+@media (min-width: 768px) {
+    .timeline-content {
+        width: 48%;
+        /* Mostrar dos elementos por fila en pantallas grandes */
+        margin-left: 1%;
+        /* Añadido margen entre elementos */
+        margin-right: 1%;
+        float: left;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        clear: both;
+        /* Limpiar el flotante en elementos impares */
+    }
+}
+
+
+/* Agrega estos estilos a tu archivo CSS */
+
+.vision-mision-valores {
+    background-color: #f8f8f83e;
+    padding: 80px 0;
+}
+
+.vision-mision-valores .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.vision,
+.mision,
+.valores {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.vision h3,
+.mision h3,
+.valores h3 {
+    color: #333;
+}
+
+.vision p,
+.mision p {
+    color: #666;
+}
+
+.valores ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.valores li {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Ajusta los colores y estilos según tus preferencias */
+
+
+.Nosotros {
+    padding: 50px 0;
+
+}
+
+.about-section {
+    text-align: center;
+    background-color: #f2eae5;
+    /* Fondo blanco */
+    padding: 50px 0;
+    /* Ajusta el relleno según sea necesario */
+}
+
+.about-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.heading-1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 50px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 50px;
+}
+
+.timeline-content {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.timeline-date {
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
+}

@@ -21,7 +21,7 @@ const Header = () => {
                             <i className="fas fa-bars"></i>
                             <i className="fas fa-times"></i>
                         </div>
-                        <Link to="/Index" className="logo">JOYASKOGI</Link>
+                        <Link to="/Home" className="logo">JOYASKOGI</Link>
                         <ul className="nav-list">
                             {links.map(link => (
                                 <li className="nav-item" key={link.path}>

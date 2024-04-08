@@ -1,0 +1,226 @@
+/* Estilo para el cuidado de joyas */
+.cuidado-section {
+    background-color: #f5f1e9;
+    /* Color café claro */
+    padding: 80px 0;
+}
+
+.heading-1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cuidado-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cuidado-item {
+    text-align: center;
+    background-color: #fff;
+    /* Color café medio */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cuidado-item:hover {
+    transform: scale(1.05);
+}
+
+.cuidado-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la sección de Consejos Adicionales */
+.consejos-section {
+    background-color: #fff;
+    /* Color café claro */
+    padding: 80px 0;
+}
+
+.heading-2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.consejos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.consejo-item {
+    text-align: center;
+    background-color: #fefefe;
+    /* Color café medio */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.consejo-item:hover {
+    transform: scale(1.05);
+}
+
+.consejo-item i {
+    font-size: 36px;
+    color: #4a4033;
+    /* Color café oscuro */
+    margin-bottom: 20px;
+}
+
+
+.consejos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.consejo-item {
+    text-align: center;
+    background-color: #b89b6b;
+    /* Color café medio */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.consejo-item:hover {
+    transform: scale(1.05);
+}
+
+.consejo-item i {
+    font-size: 36px;
+    color: #4a4033;
+    /* Color café oscuro */
+    margin-bottom: 20px;
+}
+
+/* Agrega más estilos según sea necesario para otras secciones */
+
+.consejos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cuidado-item {
+    text-align: center;
+    background-color: #d9c09d;
+    /* Color café medio */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cuidado-item:hover {
+    transform: scale(1.05);
+}
+
+.cuidado-item i {
+    font-size: 36px;
+    color: #64594a;
+    /* Color café oscuro */
+    margin-bottom: 20px;
+}
+
+/* Nuevo*/
+
+
+.consejos-section {
+    background-color: #fff;
+    /* Fondo blanco */
+    padding: 50px 0;
+    /* Ajusta el relleno según sea necesario */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.heading-2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.consejos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.consejo-item {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.consejo-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.consejo-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+
+/***/
+
+
+
+.cuidado-section {
+    background-color: #fff;
+    /* Fondo blanco */
+    padding: 50px 0;
+    /* Ajusta el relleno según sea necesario */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.heading-1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.cuidado-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.cuidado-item {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.cuidado-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cuidado-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}

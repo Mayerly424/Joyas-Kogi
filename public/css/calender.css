@@ -1,49 +1,41 @@
-#calendar {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 5px;
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--background-color, #f9f5f0);
+    color: var(--dark-color, #151515);
 }
 
-.day {
-    border: 1px solid #ccc;
-    padding: 10px;
-    position: relative;
+.calendar {
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-.day:hover {
-    background-color: #eee;
-    cursor: pointer;
-}
-
-.day.completed {
-    text-decoration: line-through;
-    color: #999;
-}
-
-.day .tasks {
-    margin-top: 10px;
-}
-
-.day .task {
-    margin-bottom: 5px;
-}
-
-.day .task input {
-    margin-right: 5px;
-}
-
-.add-task input[type="text"] {
-    width: 100%;
-}
-
-.add-task button {
-    margin-top: 5px;
-}
-
-#month-selector {
+.month-selector {
     margin-bottom: 10px;
 }
 
-#month-selector select {
-    margin-right: 5px;
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+    border: 1px solid var(--dark-color, #151515);
+    padding: 8px;
+    text-align: center;
+}
+
+.calendar th {
+    background-color: var(--primary-color, #c7a17a);
+    color: white;
+}
+
+.calendar td.selected {
+    background-color: var(--primary-color, #c7a17a);
+    color: white;
+}
+
+.note-input {
+    margin-top: 10px;
+    width: 100%;
 }

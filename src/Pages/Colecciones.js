@@ -1,83 +1,114 @@
-import React, { useEffect } from "react";
+import React, { useState } from 'react';
 
 
 const Colecciones = () => {
-    useEffect(() => {
-        // Script para el filtrado de colecciones
-        const filterScript = document.createElement("script");
-        filterScript.src = "java/jquery.mixitup.min.js";
-        document.body.appendChild(filterScript);
+    const [images, setImages] = useState([
+        { src: 'images/IMG-20230321-WA0024.jpg', alt: 'Imagen 1', temporada: 'verano', tipoJoya: 'collar', tipoMetal: 'oro', piedra: 'rubi' },
+        { src: 'images/Cadenahoja.png', alt: 'Imagen 2', temporada: 'invierno', tipoJoya: 'collar', tipoMetal: 'plata', piedra: 'zafiro' },
+        { src: 'images/Brasalete.png', alt: 'Imagen 3', temporada: 'otoño', tipoJoya: 'pulsera', tipoMetal: 'platino', piedra: 'rubie' },
 
-        // Script para funcionalidades adicionales
-        const additionalScript = document.createElement("script");
-        additionalScript.src = "";
-        document.body.appendChild(additionalScript);
+        { src: 'images/IMG-20230321-WA0058.jpg', alt: 'Imagen 4', temporada: 'verano', tipoJoya: 'collar', tipoMetal: 'plata', piedra: 'diamante' },
+        { src: 'images/Anillobaige.jpg', alt: 'Imagen 5', temporada: 'invierno', tipoJoya: 'anillo', tipoMetal: 'oro', piedra: 'zafiro' },
+        { src: 'images/Pulseras.png', alt: 'Imagen 6', temporada: 'primavera', tipoJoya: 'pulsera', tipoMetal: 'platino', piedra: 'zafiro' },
 
-        return () => {
-            document.body.removeChild(filterScript);
-            document.body.removeChild(additionalScript);
-        };
-    }, []);
+        { src: 'images/IMG-20230321-WA0032.jpg', alt: 'Imagen 7', temporada: 'verano', tipoJoya: 'aretes', tipoMetal: 'oro', piedra: 'zafiro' },
+        { src: 'images/Anillonegroconverde.jpg', alt: 'Imagen 8', temporada: 'otoño', tipoJoya: 'anillo', tipoMetal: 'oro', piedra: 'esmeralda' },
+        { src: 'images/Pulseradoradaotravez.jpg', alt: 'Imagen 9', temporada: 'otoño', tipoJoya: 'pulsera', tipoMetal: 'oro', piedra: 'rubie' },
+
+        { src: 'images/Aretesorquideas.png', alt: 'Imagen 10', temporada: 'verano', tipoJoya: 'aretes', tipoMetal: 'oro', piedra: 'diamante' },
+        { src: 'images/Anilloplateado.jpg', alt: 'Imagen 11', temporada: 'invierno', tipoJoya: 'anillo', tipoMetal: 'platino', piedra: 'diamante' },
+        { src: 'images/Collarraro.jpg', alt: 'Imagen 12', temporada: 'primavera', tipoJoya: 'collar', tipoMetal: 'platino', piedra: 'rubie' },
+
+        { src: 'images/Collardorado2.png', alt: 'Imagen 13', temporada: 'verano', tipoJoya: 'collar', tipoMetal: 'oro', piedra: 'rubie' },
+        { src: 'images/Pulseraplata.png', alt: 'Imagen 14', temporada: 'invierno', tipoJoya: 'anillo', tipoMetal: 'plata', piedra: 'plata' },
+        { src: 'images/Pulsera.png', alt: 'Imagen 15', temporada: 'primavera', tipoJoya: 'pulsera', tipoMetal: 'oro', piedra: 'zafiro' },
+
+        { src: 'images/Aretesverdenegro.jpg', alt: 'Imagen 16', temporada: 'inivierno', tipoJoya: 'aretes', tipoMetal: 'oro', piedra: 'esmeralda' },
+        { src: 'images/OtroOtroanillo.jpg', alt: 'Imagen 17', temporada: 'otoño', tipoJoya: 'anillo', tipoMetal: 'acero', piedra: 'perlaa' },
+        { src: 'images/Piedranaranja.png', alt: 'Imagen 18', temporada: 'primavera', tipoJoya: 'pulsera', tipoMetal: 'oro', piedra: 'oro' },
+        // Agrega más imágenes con sus propiedades
+        { src: 'images/Combonaranja.jpg', alt: 'Imagen 19', temporada: 'inivierno', tipoJoya: 'complemento', tipoMetal: 'oro', piedra: 'zafiro' },
+        { src: 'images/Combopalta.jpg', alt: 'Imagen 20', temporada: 'otoño', tipoJoya: 'complemento', tipoMetal: 'acero', piedra: 'diamante' },
+        { src: 'images/IMG-20230321-WA0057.jpg', alt: 'Imagen 21', temporada: 'primavera', tipoJoya: 'complemento', tipoMetal: 'oro', piedra: 'perla' },
+        // Agrega más imágenes con sus propiedades
+    ]);
+
+    const [temporadaFilter, setTemporadaFilter] = useState('');
+    const [tipoJoyaFilter, setTipoJoyaFilter] = useState('');
+    const [tipoMetalFilter, setTipoMetalFilter] = useState('');
+    const [piedraFilter, setPiedraFilter] = useState('');
+
+    const handleTemporadaChange = (e) => {
+        setTemporadaFilter(e.target.value);
+    };
+
+    const handleTipoJoyaChange = (e) => {
+        setTipoJoyaFilter(e.target.value);
+    };
+
+    const handleTipoMetalChange = (e) => {
+        setTipoMetalFilter(e.target.value);
+    };
+
+    const handlePiedraChange = (e) => {
+        setPiedraFilter(e.target.value);
+    };
+
+    const filteredImages = images.filter(image =>
+        (temporadaFilter === '' || image.temporada === temporadaFilter) &&
+        (tipoJoyaFilter === '' || image.tipoJoya === tipoJoyaFilter) &&
+        (tipoMetalFilter === '' || image.tipoMetal === tipoMetalFilter) &&
+        (piedraFilter === '' || image.piedra === piedraFilter)
+    );
 
     return (
-        <main className="cd-main-content">
-            <div className="cd-tab-filter-wrapper">
-                <div className="cd-tab-filter">
-                    <ul className="cd-filters">
-                        <li className="placeholder">
-                            <a data-type="all" href="#0">Todo</a>
-                        </li>
-                        <li className="filter"><a className="selected" href="#0" data-type="all">Todo</a></li>
-                        <li className="filter" data-filter=".primavera"><a href="#0" data-type="color-1">Colección Primavera</a></li>
-                        <li className="filter" data-filter=".verano"><a href="#0" data-type="color-2">Colección verano</a></li>
-                        <li className="filter" data-filter=".otoño"><a href="#0" data-type="color-2">Colección otoño</a></li>
-                        <li className="filter" data-filter=".invierno"><a href="#0" data-type="color-2">Colección invierno</a></li>
-                    </ul>
-                </div>
+        <div className="container">
+
+            <div className="filters">
+                <label>Temporada:</label>
+                <select value={temporadaFilter} onChange={handleTemporadaChange}>
+                    <option value="">Todos</option>
+                    <option value="invierno">Invierno</option>
+                    <option value="verano">Verano</option>
+                    <option value="otoño">Otoño</option>
+                    <option value="primavera">Primavera</option>
+                </select>
+                <label>Tipo de joya:</label>
+                <select value={tipoJoyaFilter} onChange={handleTipoJoyaChange}>
+                    <option value="">Todos</option>
+                    <option value="collar">Collar</option>
+                    <option value="aretes">Aretes</option>
+                    <option value="anillo">Anillo</option>
+                    <option value="pulsera">Pulsera</option>
+                    <option value="complemento">Complemento</option> {/* Nueva opción */}
+                </select>
+                <label>Tipo de metal:</label>
+                <select value={tipoMetalFilter} onChange={handleTipoMetalChange}>
+                    <option value="">Todos</option>
+                    <option value="oro">Oro</option>
+                    <option value="plata">Plata</option>
+                    <option value="platino">Platino</option>
+                    <option value="cobre">Cobre</option>
+                    <option value="acero">Acero</option>
+                </select>
+                <label>Piedras:</label>
+                <select value={piedraFilter} onChange={handlePiedraChange}>
+                    <option value="">Todas</option>
+                    <option value="esmeral">Esmeralda</option>
+                    <option value="diamante">Diamante</option>
+                    <option value="zafiro">Zafiro</option>
+                    <option value="rubie">Rubí</option>
+                    <option value="perla">Perla</option>
+                </select>
             </div>
-
-            <section className="cd-gallery">
-                <ul>
-                    <div>
-                        <li className="mix primavera aretes oro diamante"><img src="images/Aretesorquideas.png" alt="Image 1" /></li>
-                        <li className="mix verano collares plata esmeralda"><img src="images/Cadenahoja.png" alt="Image 2" /></li>
-                        <li className="mix otoño pulceras platino zafiro"><img src="images/Pulseras.png" alt="Image 3" /></li>
-                        <li className="mix invierno argollas cobre rubie"><img src="images/Pulseraplata.png" alt="Image 4" /></li>
-                        <li className="mix primavera cadenas acero perla"><img src="images/IMG-20230321-WA0015.jpg" alt="Image 5" /></li>
-                        <li className="mix verano complementos titanio diamante"><img src="images/IMG-20230321-WA0030.jpg" alt="Image 6" /></li>
-                        <li className="mix otoño aretes oro esmeralda"><img src="images/Aretesverdenegro.jpg" alt="Image 7" /></li>
-                        <li className="mix invierno collares plata zafiro"><img src="images/Collarpiedrasverdes.png" alt="Image 8" /></li>
-                        <li className="mix primavera pulceras platino rubie"><img src="images/Collarraro.jpg" alt="Image 9" /></li>
-                        <li className="mix verano argollas cobre perla"><img src="images/AnilloBlanco.jpg" alt="Image 10" /></li>
-                        <li className="mix otoño cadenas acero diamante"><img src="images/Collarhojsplateadas.jpg" alt="Image 11" /></li>
-                        <li className="mix invierno complementos titanio esmeralda"><img src="images/Mariguanita.png" alt="Image 12" /></li>
-                        <li className="mix primavera aretes oro zafiro"><img src="images/IMG-20230321-WA0006.jpg" alt="Image 13" /></li>
-                        <li className="mix verano collares plata rubie"><img src="images/Collarhoja.png" alt="Image 14" /></li>
-                        <li className="mix otoño pulceras platino perla"><img src="images/Collarverdeconhoja.jpg" alt="Image 15" /></li>
-                        <li className="mix invierno argollas cobre diamante"><img src="images/Aretescafe.jpg" alt="Image 16" /></li>
-                        <li className="mix primavera cadenas acero esmeralda"><img src="images/Aretescafe.jpg" alt="Image 17" /></li>
-                        
+            <div className="image-container">
+                {filteredImages.map((image, index) => (
+                    <div key={index} className="image-item">
+                        <img src={image.src} alt={image.alt} className="image" />
                     </div>
-                </ul>
-                <div className="cd-fail-message">No se encontraron resultados</div>
-            </section>
-
-            <div className="cd-filter">
-                <form>
-                    <div className="cd-filter-block">
-                        <h4>Buscar</h4>
-                        <div className="cd-filter-content">
-                            <input type="search" placeholder="Intenta collar.." />
-                        </div>
-                    </div>
-
-                    {/* Resto de los filtros */}
-
-                </form>
-                <a href="#0" className="cd-close">Cerrar</a>
+                ))}
             </div>
-            <a href="#0" className="cd-filter-trigger">...</a>
-        </main>
+        </div>
     );
 };
 

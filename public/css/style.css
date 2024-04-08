@@ -600,3 +600,56 @@ header h2 {
 /*************************
   Formulario de incio de sesión
   **************************/
+
+
+
+/*********************************
+
+  GALERIA
+  *************************/
+
+.container-products {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 20px;
+}
+
+
+
+/*******************
+HOME SERVICIOS QUE OFRECEMOS
+
+***********/
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 20px;
+	max-width: 900px;
+}
+
+.box {
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.front-face,
+.back-face {
+	padding: 20px;
+	text-align: center;
+	transition: transform 0.3s ease;
+	/* Agrega una transición suave */
+}
+
+.box:hover .front-face {
+	transform: rotateY(180deg);
+	/* Gira la cara frontal al hacer hover */
+}
+
+.box:hover .back-face {
+	transform: rotateY(0deg);
+	/* Muestra la cara trasera al hacer hover */
+}

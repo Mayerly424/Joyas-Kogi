@@ -278,7 +278,8 @@ header {
     display: grid;
     margin: 20px 90px auto;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 2fr));
+    background: #d9caba;
 }
 
 @media (max-width: 700px) {
@@ -881,3 +882,8 @@ footer {
         /* Agregar un margen inferior para separar las imágenes */
     }
 }
+
+
+
+
+
