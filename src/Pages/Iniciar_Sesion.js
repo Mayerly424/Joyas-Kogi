@@ -1,7 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
 
-const Iniciar_Sesion = () => {
+const Iniciar_Sesion = ({ setLoggedIn }) => {
+  const [usuario, setUsuario] = useState("");
+  const [redireccionar, setRedireccionar] = useState(false);
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    // Lógica para autenticar al usuario aquí...
+    if (usuario === "administrador") {
+      // Si es administrador, redirigir a la página de perfil de administrador
+      setRedireccionar(true);
+      setLoggedIn(true);
+    } else {
+      // Si es usuario, redirigir a la página de perfil de usuario
+      // Aquí puedes definir tu lógica de redirección para usuarios normales
+      console.log("Usuario inició sesión");
+      setLoggedIn(true);
+      setRedireccionar(true);
+    }
+  };
+
+  const handleRadioChange = (event) => {
+    setUsuario(event.target.value);
+  };
+
+  if (redireccionar) {
+    return usuario === "administrador" ? <Navigate to="/PerfilAdmin" /> : <Navigate to="/Perfil" />;
+  }
+
+
   return (
     <section className="form-login">
       <div className="container--modifier">
@@ -26,16 +54,30 @@ const Iniciar_Sesion = () => {
           <div className="form-content">
             <div className="login-form">
               <div className="title">Iniciar Sesión</div>
-              <form action="/PerfilAdmin">
+              <form onSubmit={handleLogin}>
                 <div className="input-boxes">
                   <div className="input-box">
                     <i className="fas fa-user" />
                     <div className="gender">
-                      <input type="radio" id="check-male" name="gender" defaultChecked />
+                      <input
+                        type="radio"
+                        id="check-male"
+                        name="gender"
+                        value="administrador"
+                        checked={usuario === "administrador"}
+                        onChange={handleRadioChange}
+                      />
                       <label htmlFor="check-male">Administrador</label>
                     </div>
                     <div className="gender">
-                      <input type="radio" id="check-female" name="gender" />
+                      <input
+                        type="radio"
+                        id="check-female"
+                        name="gender"
+                        value="usuario"
+                        checked={usuario === "usuario"}
+                        onChange={handleRadioChange}
+                      />
                       <label htmlFor="check-female">Usuario</label>
                     </div>
                     <style dangerouslySetInnerHTML={{ __html: "\n                  .gender{\n                    margin-left: 25px;\n                  }\n                " }} />
@@ -88,7 +130,6 @@ const Iniciar_Sesion = () => {
         </div>
       </div>
     </section>
-
   );
 };
 
