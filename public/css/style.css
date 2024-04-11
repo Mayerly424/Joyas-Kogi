@@ -3,8 +3,47 @@
 :root {
 	--primary-color: #c7a17a;
 	--background-color: #f9f5f0;
-	--dark-color: #151515;
+	--dark-color: #b09b9b;
 }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.btn-table {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.btn-table button {
+	background-color: #c7a17a;
+	/* Color de fondo verde */
+	border: none;
+	/* Elimina el borde del botón */
+	color: white;
+	/* Color de texto blanco */
+	padding: 10px 20px;
+	/* Espaciado interno */
+	text-align: center;
+	/* Alineación del texto al centro */
+	text-decoration: none;
+	/* Elimina el subrayado del texto */
+	font-size: 16px;
+	/* Tamaño de fuente */
+	margin: 0 10px;
+	/* Margen entre botones */
+	cursor: pointer;
+	/* Cambia el cursor al pasar por encima */
+}
+
+.btn-table button:hover {
+	background-color: #45a049;
+	/* Color de fondo verde más oscuro al pasar el mouse */
+}
+
 
 /* Estilos para el botón de iniciar sesión */
 .iniciar-sesion-btn {
@@ -26,6 +65,11 @@
 .button-container {
 	margin-top: 20px;
 	text-align: center;
+}
+
+.btn-table button:hover {
+	background-color: #c7a17a;
+	/* Cambio de color de fondo al pasar el mouse sobre el botón */
 }
 
 
@@ -652,4 +696,93 @@ HOME SERVICIOS QUE OFRECEMOS
 .box:hover .back-face {
 	transform: rotateY(0deg);
 	/* Muestra la cara trasera al hacer hover */
+}
+
+
+
+
+
+
+
+/*********************************
+
+
+
+
+
+
+
+
+
+**************************/
+
+.input-data {
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.input-data .details {
+	margin-right: 10px;
+	font-family: 'Poppins', sans-serif;
+	/* Tipo de letra */
+}
+
+.input-data input[type="text"],
+.input-data input[type="date"],
+.input-data input[type="time"] {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+	/* Tipo de letra */
+}
+
+.input-data input[type="text"]::placeholder,
+.input-data input[type="date"]::placeholder,
+.input-data input[type="time"]::placeholder {
+	color: #aaa;
+}
+
+.input-data input[type="text"]:focus,
+.input-data input[type="date"]:focus,
+.input-data input[type="time"]:focus {
+	outline: none;
+	border-color: #333;
+}
+
+.gender-details {
+	margin-bottom: 20px;
+}
+
+.category {
+	display: flex;
+}
+
+.category input[type="radio"] {
+	display: none;
+}
+
+.category label {
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+	cursor: pointer;
+}
+
+.category label .dot {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-right: 10px;
+	background-color: #ae8465;
+	/* Color café */
+}
+
+.category label .gender {
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+	/* Tipo de letra */
 }

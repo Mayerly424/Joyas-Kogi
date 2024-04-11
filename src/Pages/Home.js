@@ -43,12 +43,12 @@ const Home = () => {
             <div className="icon">
               <i className="fas fa-broom" />
             </div>
-            <span>Limpiezas</span>
+            <span>Aeróbicos</span>
           </div>
           <div className="back-face">
-            <span>Limpiezas</span>
+            <span>Aeróbicos</span>
             <p>
-              En nuestra joyería, ofrecemos un servicio de limpieza de joyas excepcional para ayudarte a mantener tus piezas preciosas en su mejor estado.
+            Los aeróbicos son una combinación coordinada de movimientos que gimnásticos al ritmo de la música, ayuda a perfeccionar la coordinación y ejercita nuestra flexibilidad, desarrollo cardiovascular, orientación, ritmo y resistencia. Son mucho más comunes en los gimnasios para mujeres.
             </p>
             <Link to="/Iniciar_Sesion" className="btn cta-btn cta-btn--edit">Agenda tu cita</Link>
           </div>
@@ -58,12 +58,13 @@ const Home = () => {
             <div className="icon">
               <i className="fas fa-tools" />
             </div>
-            <span>Reparación</span>
+            <span>Body combat</span>
           </div>
           <div className="back-face">
-            <span>Reparación</span>
+            <span>Body combat</span>
             <p>
-              En nuestra joyería, nos enorgullece ofrecer un servicio de reparación de joyas excepcional para ayudarte a restaurar y renovar tus piezas favoritas.
+            El body combat maneja movimientos intercalados y coordinados de diversas artes marciales al ritmo de la música
+            y hace parte de los ejercicios cardiovasculares que puede ofrecerte  Gim Box
             </p>
             <Link to="/Iniciar_Sesion" className="btn cta-btn cta-btn--edit">Agenda tu cita</Link>
           </div>
@@ -76,47 +77,72 @@ const Home = () => {
             <span>Mantenimiento</span>
           </div>
           <div className="back-face">
-            <span>Mantenimiento</span>
+            <span>Entrenamiento con un personal trainner</span>
             <p>
-              En nuestra prestigiosa joyería, ofrecemos un servicio completo de mantenimiento de joyas para garantizar que tus piezas preciadas se mantengan en perfecto estado a lo largo del tiempo.
+            Depende de tu membresía el gym te puede dar el apoyo de un personal trainner, si una clase grupal es buena, tener a alguien dedicado a tu progreso será mil veces mejor.
             </p>
             <Link to="/Iniciar_Sesion" className="btn cta-btn cta-btn--edit">Agenda tu cita</Link>
           </div>
         </div>
       </div>
-      <section>
-        <section className="dis-sto">
-          <div className="container">
-            <div className="res-info">
-            </div>
-          </div>
-          <h1 className="heading-1">Galeria</h1>
-        </section>
-        <div className="slider-container">
-          <div className="slider">
-            <img src="img/Slider1.png" alt="Imagen 1" />
-            <img src="img/Slider2.png" alt="Imagen 2" />
-            <img src="img/Slider3.png" alt="Imagen 3" />
-            <img src="img/Slider4.png" alt="Imagen 4" />
-            <img src="img/Slider5.png" alt="Imagen 1" />
-            <img src="img/Slider6.png" alt="Imagen 2" />
-            <img src="img/Slider10.png" alt="Imagen 3" />
-            <img src="img/Slider9.png" alt="Imagen 4" />
-            <img src="img/Slider8.png" alt="Imagen 1" />
-            <img src="img/Slider10.png" alt="Imagen 2" />
-            <img src="img/Slider11.png" alt="Imagen 3" />
-            <img src="img/Slider12.png" alt="Imagen 4" />
-            <img src="img/Slider16.png" alt="Imagen 1" />
-            <img src="img/Slider14.png" alt="Imagen 2" />
-            <img src="img/Slider15.png" alt="Imagen 3" />
-            <img src="img/Slider16.png" alt="Imagen 4" />
-            <img src="img/Slider17.png" alt="Imagen 3" />
-            <img src="img/Slider18.png" alt="Imagen 4" />
-            <img src="img/Slider19.png" alt="Imagen 3" />
-            <img src="img/Slider9.png" alt="Imagen 4" />
-          </div>
+
+      <div>
+
+  <br />
+  <div id="theCarousel" className="carousel slide" data-ride="carousel">
+    {/* Indicadores */}
+    <ol className="carousel-indicators">
+      <li data-target="#theCarousel" data-slide-to={0} className="active" />
+      <li data-target="#theCarousel" data-slide-to={1} />
+      <li data-target="#theCarousel" data-slide-to={2} />
+      <li data-target="#theCarousel" data-slide-to={3} />
+    </ol>
+    <div className="carousel-inner" role="listbox">
+      <div className="item active">
+        <img src="images/bicicletaestatica.jpg"alt="fotografia" width={200} height={224} />  
+        <div className="carousel-caption d-none d-md-block">
+          <h3>Bicicleta estatica</h3>
+          <p>$999.999</p>
         </div>
-      </section>
+      </div>
+      <div className="item">
+        <img src="images/maquinaductor.webp" alt="fotografia" width={200} height={224} /> 
+        <div className="carousel-caption d-none d-md-block">
+          <h3> Maquina de aductor</h3>
+          <p>$999.999</p>
+        </div>
+      </div>
+      <div className="item">
+        <img src="images/prensa.jpg" alt="pintura" width={200} height={224} />
+        <div className="carousel-caption d-none d-md-block">
+          <h3>Prensa de pierna</h3>
+          <p>$890.876</p>
+        </div>
+      </div>
+      <div className="item">
+        <img src="images/banco.jpg" alt="diseno" width={200} height={224} /> 
+        <div className="carousel-caption d-none d-md-block">
+          <h3>Banco con espaldar</h3>
+          <p>950.308</p>
+        </div>
+      </div>
+      <a className="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
+        <span className="glyphicon glyphicon-chevron-left" aria-hidden="true" />
+        <span className="sr-only">anterior</span>
+      </a>
+      <a className="right carousel-control" href="#theCarousel" role="button" data-slide="next">
+        <span className="glyphicon glyphicon-chevron-right" aria-hidden="true" />
+        <span className="sr-only">siguiente</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+      
+
+
+
+
       <section className="container top-products">
         <h1 className="heading-1">Algunos descuentos</h1>
         <div className="container-options">
@@ -127,7 +153,7 @@ const Home = () => {
           {/* Producto 1 */}
           <div className="card-product">
             <div className="container-img">
-              <img src="images/IMG-20230321-WA0028.jpg" alt="Cafe Irish" />
+              <img src="images/bandaelastica.png" alt="Cafe Irish" />
               <span className="discount">-13%</span>
               <div className="button-group">
                 <span>
@@ -146,17 +172,17 @@ const Home = () => {
                 <i className="fa-solid fas fa-star" />
                 <i className="fa-regular fas fa-star" />
               </div>
-              <h3>Collar</h3>
+              <h3>Bandas Elasticas</h3>
               <span className="add-cart">
                 <Link to="/Galeria"><i className="fa-solid fas fa-shopping-cart" /></Link>
               </span>
-              <p className="price">$4.60 <span>$5.30</span></p>
+              <p className="price">$32.594 <span>$45.390</span></p>
             </div>
           </div>
           {/* Producto 2 */}
           <div className="card-product">
             <div className="container-img">
-              <img src="images/IMG-20230321-WA0017.jpg" alt="Cafe incafe-ingles.jpg" />
+              <img src="images/tapete.jpg" alt="Cafe incafe-ingles.jpg" />
               <span className="discount">-22%</span>
               <div className="button-group">
                 <span>
@@ -175,17 +201,17 @@ const Home = () => {
                 <i className="fa-regular fas fa-star" />
                 <i className="fa-regular fas fa-star" />
               </div>
-              <h3>Collar hoja</h3>
+              <h3>Tapete</h3>
               <span className="add-cart">
                 <Link to="/Galeria"><i className="fa-solid fas fa-shopping-cart" /></Link>
               </span>
-              <p className="price">$5.70 <span>$7.30</span></p>
+              <p className="price">$32.999 <span>$45.890</span></p>
             </div>
           </div>
           {/* Producto 3 */}
           <div className="card-product">
             <div className="container-img">
-              <img src="images/IMG-20230321-WA0015.jpg" alt="Cafe Australiano" />
+              <img src="images/bicicletaestatica.jpg" alt="Cafe Australiano" />
               <span className="discount">-13%</span>
               <div className="button-group">
                 <span>
@@ -204,17 +230,17 @@ const Home = () => {
                 <i className="fa-solid fas fa-star" />
                 <i className="fa-solid fas fa-star" />
               </div>
-              <h3>Collar de hoja</h3>
+              <h3>Bicicleta estatica</h3>
               <span className="add-cart">
                 <Link to="/Galeria"><i className="fa-solid fas fa-shopping-cart" /></Link>
               </span>
-              <p className="price">$3.20 <span>$7.30</span></p>
+              <p className="price">$999.999 <span>$1.500.985</span></p>
             </div>
           </div>
           {/* Producto 4 */}
           <div className="card-product">
             <div className="container-img">
-              <img src="images/IMG-20230321-WA0023.jpg" alt="Cafe Helado" />
+              <img src="images/Polea.jpg" alt="Cafe Helado" />
               <span className="discount">-13%</span>
               <div className="button-group">
                 <span>
@@ -233,44 +259,44 @@ const Home = () => {
                 <i className="fa-solid fas fa-star" />
                 <i className="fa-regular fas fa-star" />
               </div>
-              <h3>Collar de piedras</h3>
+              <h3>Polea Cruzada</h3>
               <span className="add-cart">
                 <Link to="/Galeria"><i className="fa-solid fas fa-shopping-cart" /></Link>
               </span>
-              <p className="price">$5.60 <span>$7.30</span></p>
+              <p className="price">$888.999 <span>$1.200.000</span></p>
             </div>
           </div>
         </div>
       </section>
       <section className="gallery">
         <div className="gallery-img-1">
-          <img src="img/anillonegro.jpeg" alt="Gallery Img1" className="gallery-img-1" />
+          <img src="images/caja.webp" alt="Gallery Img1" className="gallery-img-1" />
           <div className="hover-galeria">
-            <Link to="/Galeria">Anillos y argollas</Link>
+            <Link to="/Galeria">Caja</Link>
           </div>
         </div>
         <div className="gallery-img-2">
-          <img src="img/Aretesorquideas.png" alt="Gallery Img2" className="gallery-img-2" />
+          <img src="images/caminadora.jpg" alt="Gallery Img2" className="gallery-img-2" />
           <div className="hover-galeria">
-            <Link to="/Galeria">Aretes y aros</Link>
+            <Link to="/Galeria">Caminadora</Link>
           </div>
         </div>
         <div className="gallery-img-3">
-          <img src="img/CollarNegro.jpeg" alt="Gallery Img3" className="gallery-img-3" />
+          <img src="images/pesas_2_kilos.webp" alt="Gallery Img3" className="gallery-img-3" />
           <div className="hover-galeria">
-            <Link to="/Galeria">Cadenas y Collares</Link>
+            <Link to="/Galeria">Pesas de 2 kilos</Link>
           </div>
         </div>
         <div className="gallery-img-4">
-          <img src="img/Cadenahoja.png" alt="Gallery Img4" className="gallery-img-4" />
+          <img src="images/Polea.jpg" alt="Gallery Img4" className="gallery-img-4" />
           <div className="hover-galeria">
-            <Link to="/Galeria">Dijes</Link>
+            <Link to="/Galeria">Polea Cruzada</Link>
           </div>
         </div>
         <div className="gallery-img-5">
-          <img src="img/accesorio.jpeg" alt="Gallery Img5" className="gallery-img-5" />
+          <img src="images/bicicletaestatica.jpg" alt="Gallery Img5" className="gallery-img-5" />
           <div className="hover-galeria">
-            <Link to="/Galeria">Accesorios</Link>
+            <Link to="/Galeria">Bicicleta estatica</Link>
           </div>
         </div>
       </section>
@@ -279,11 +305,13 @@ const Home = () => {
         <div className="wrapper--edit">
           <div className="box">
             <i className="fas fa-quote-left quote" />
-            <p>La joyería de JoyasKogi es una obra de arte. Me encanta cómo combinan los elementos naturales con las hojas metalizadas para crear diseños únicos y hermosos. Además, poder personalizar mis joyas hace que sean aún más especiales. Si buscas piezas únicas y de calidad, definitivamente deberías echar un vistazo a JoyasKogi</p>
+            <p>Mi experiencia en GimBox ha sido excelente. El personal es amable y servicial, siempre dispuesto a ayudar y motivar. 
+              Las instalaciones están bien mantenidas y cuentan con una amplia variedad de equipos de entrenamiento. 
+              Me siento cómodo y seguro cada vez que entro al gimnasio.</p>
             <div className="content">
               <div className="info">
                 <div className="name">Alejandro González</div>
-                <div className="job">Freelancer | Publicista</div>
+                <div className="job"> Publicista</div>
                 <div className="stars">
                   <i className="fas fa-star" />
                   <i className="fas fa-star" />
@@ -293,18 +321,20 @@ const Home = () => {
                 </div>
               </div>
               <div className="image">
-                <img src="images/Persona1.jpg" alt />
+                <img src="images/Persona5.jpg" alt />
               </div>
             </div>
           </div>
           <div className="box">
             <i className="fas fa-quote-left quote" />
-            <p>Estoy enamorada de mis joyas de la joyeria JoyasKogi. El hecho de que utilicen materiales naturales y hojas metalizadas les da un encanto único. Cada pieza es verdaderamente especial y refleja mi estilo y personalidad. ¡Recomendaría JoyasKogi a cualquiera que busque joyería artesanal y personalizada!</p>
+            <p>GimBox ofrece una excelente relación calidad-precio. Me inscribí hace varios meses y estoy muy satisfecho con lo que obtengo por mi membresía. 
+              No solo tengo acceso a equipos de alta calidad, sino que también puedo participar en clases grupales dirigidas por entrenadores expertos, 
+              todo a un precio asequible.</p>
             <div className="content">
               <div className="info">
                 <div className="name">Sofia Ramírez
                 </div>
-                <div className="job"> YouTuber | Blogger</div>
+                <div className="job"> Influencer | Blogger</div>
                 <div className="stars">
                   <i className="fas fa-star" />
                   <i className="fas fa-star" />
@@ -314,18 +344,18 @@ const Home = () => {
                 </div>
               </div>
               <div className="image">
-                <img src="images/Persona2.jpg" alt />
+                <img src="images/Persona4.jpg" alt />
               </div>
             </div>
           </div>
           <div className="box">
             <i className="fas fa-quote-left  quote" />
-            <p>JoyasKogi es mi tienda de joyería favorita. Su enfoque en los materiales naturales y las hojas metalizadas realmente las distingue de otras joyerías. Poder personalizar mis joyas me permite expresar mi estilo único. La calidad y la atención al detalle en cada pieza son increíbles. ¡No puedo tener suficiente de las joyas de JoyasKogi!</p>
+            <p>Lo que más me gusta de GimBox es el ambiente motivador y comunitario. Los entrenadores son apasionados y están comprometidos con ayudarte a alcanzar tus objetivos de fitness. Además, la comunidad de socios es muy solidaria y alentadora. </p>
             <div className="content">
               <div className="info">
                 <div className="name">Aisha Johnson
                 </div>
-                <div className="job"> Diseñador | Desarrollador</div>
+                <div className="job"> Ingeniera quimica</div>
                 <div className="stars">
                   <i className="fas fa-star" />
                   <i className="fas fa-star" />
@@ -335,7 +365,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="image">
-                <img src="images/Persona3.jpg" alt />
+                <img src="images/Persona7.jpg" alt />
               </div>
             </div>
           </div>

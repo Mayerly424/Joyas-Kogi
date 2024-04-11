@@ -1,34 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 :root {
-	--primary-color: #c7a17a;
-	--background-color: #f9f5f0;
-	--dark-color: #151515;
+  --primary-color: #c7a17a;
+  --background-color: #f9f5f0;
+  --dark-color: #151515;
 }
 
 
 
-.cita{
+.cita {
   height: 100vh;
   justify-content: center;
   align-items: center;
   padding: 10px;
 
 }
-.container{
+
+.container {
   max-width: 700px;
   width: 100%;
   background-color: #fff;
   padding: 10px 30px;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   margin-bottom: 50px;
 }
-.container .title{
+
+.container .title {
   font-size: 25px;
   font-weight: 500;
   position: relative;
 }
-.container .title::before{
+
+.container .title::before {
   content: "";
   position: absolute;
   left: 0;
@@ -38,22 +42,26 @@
   border-radius: 5px;
   background: var(--primary-color);
 }
-.content form .user-details{
+
+.content form .user-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px 0 12px 0;
 }
-form .user-details .input-box{
+
+form .user-details .input-box {
   margin-bottom: 15px;
   width: calc(100% / 2 - 20px);
 }
-form .input-box span.details{
+
+form .input-box span.details {
   display: block;
   font-weight: 500;
   margin-bottom: 5px;
 }
-.user-details .input-box input{
+
+.user-details .input-box input {
   height: 45px;
   width: 100%;
   outline: none;
@@ -64,26 +72,31 @@ form .input-box span.details{
   border-bottom-width: 2px;
   transition: all 0.3s ease;
 }
+
 .user-details .input-box input:focus,
-.user-details .input-box input:valid{
+.user-details .input-box input:valid {
   border-color: var(--primary-color);
 }
- form .gender-details .gender-title{
+
+form .gender-details .gender-title {
   font-size: 20px;
   font-weight: 500;
- }
- form .category{
-   display: flex;
-   width: 80%;
-   margin: 14px 0 ;
-   justify-content: space-between;
- }
- form .category label{
-   display: flex;
-   align-items: center;
-   cursor: pointer;
- }
- form .category label .dot{
+}
+
+form .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+form .category label .dot {
   height: 18px;
   width: 18px;
   border-radius: 50%;
@@ -92,57 +105,381 @@ form .input-box span.details{
   border: 5px solid transparent;
   transition: all 0.3s ease;
 }
- #dot-1:checked ~ .category label .one,
- #dot-2:checked ~ .category label .two,
- #dot-3:checked ~ .category label .three{
-   background: var(--primary-color);
-   border-color: #d9d9d9;
- }
- form input[type="radio"]{
-   display: none;
- }
- form .button{
-   height: 45px;
-   margin: 35px 0
- }
- form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background: var(--primary-color);
- }
- form .button input:hover{
+
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two,
+#dot-3:checked~.category label .three {
+  background: var(--primary-color);
+  border-color: #d9d9d9;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form .button {
+  height: 45px;
+  margin: 35px 0
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--primary-color);
+}
+
+form .button input:hover {
   /* transform: scale(0.99); */
   background: var(--primary-color);
-  }
- @media(max-width: 584px){
- .container{
-  max-width: 100%;
 }
-form .user-details .input-box{
+
+@media(max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+
+  form .user-details .input-box {
     margin-bottom: 15px;
     width: 100%;
   }
-  form .category{
+
+  form .category {
     width: 100%;
   }
-  .content form .user-details{
+
+  .content form .user-details {
     max-height: 300px;
     overflow-y: scroll;
   }
-  .user-details::-webkit-scrollbar{
+
+  .user-details::-webkit-scrollbar {
     width: 5px;
   }
-  }
-  @media(max-width: 459px){
-  .container .content .category{
+}
+
+@media(max-width: 459px) {
+  .container .content .category {
     flex-direction: column;
+  }
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 50px;
+}
+
+
+/**************
+
+***********/
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  /* Fondo blanco */
+  font-size: 16px;
+  /* Tamaño de texto más grande */
+}
+
+form {
+  max-width: 600px;
+  /* Ancho máximo del formulario */
+  margin: 0 auto;
+  /* Centrar el formulario horizontalmente */
+  padding: 40px;
+  /* Espacio alrededor del formulario */
+}
+
+h2 {
+  font-size: 24px;
+  /* Tamaño de título más grande */
+}
+
+label {
+  font-size: 18px;
+  /* Tamaño de texto de etiqueta más grande */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="radio"] {
+  width: 100%;
+  /* Ancho completo para los campos de entrada */
+  padding: 10px;
+  /* Espacio alrededor del texto en los campos de entrada */
+  margin-bottom: 20px;
+  /* Espacio entre los campos de entrada */
+  font-size: 18px;
+  /* Tamaño de texto de entrada más grande */
+}
+
+input[type="submit"] {
+  background-color: #333333;
+  /* Color de fondo del botón */
+  color: #ffffff;
+  /* Color de texto del botón */
+  padding: 15px 30px;
+  /* Espacio alrededor del texto en el botón */
+  border: none;
+  /* Eliminar borde del botón */
+  border-radius: 5px;
+  /* Bordes redondeados para el botón */
+  font-size: 18px;
+  /* Tamaño de texto del botón más grande */
+  cursor: pointer;
+  /* Cambiar el cursor al pasar por encima del botón */
+  transition: background-color 0.3s;
+  /* Transición suave en el cambio de color de fondo */
+}
+
+input[type="submit"]:hover {
+  background-color: #555555;
+  /* Color de fondo del botón al pasar por encima */
+}
+
+
+.input-data {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input-data .details {
+  margin-right: 10px;
+}
+
+.input-data input[type="text"],
+.input-data input[type="date"],
+.input-data input[type="time"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-data input[type="text"]::placeholder,
+.input-data input[type="date"]::placeholder,
+.input-data input[type="time"]::placeholder {
+  color: #aaa;
+}
+
+.input-data input[type="text"]:focus,
+.input-data input[type="date"]:focus,
+.input-data input[type="time"]:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.gender-details {
+  margin-bottom: 20px;
+}
+
+.category {
+  display: flex;
+}
+
+.category input[type="radio"] {
+  display: none;
+}
+
+.category label {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.category label .dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.category label .dot.one {
+  background-color: #8B4513;
+  /* Color café */
+}
+
+.category label .dot.two {
+  background-color: #8B4513;
+  /* Color café */
+}
+
+.category label .dot.three {
+  background-color: #8B4513;
+  /* Color café */
+}
+
+.category label .gender {
+  font-size: 16px;
+}
+
+
+/**********************
+
+
+BOTONES 
+REPARACION MANTENIMIENTO
+
+
+**************************/
+
+.form-check-input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-color: #c7a17a;
+  /* Color café */
+  border: 1px solid #c7a17a;
+  /* Borde del mismo color */
+  border-radius: 50%;
+  /* Borde redondeado para hacer un círculo */
+  cursor: pointer;
+}
+
+.form-check-label {
+  font-size: 16px;
+  /* Tamaño de texto */
+}
+
+/* Para ajustar el tamaño de los radios en los dispositivos móviles */
+@media (max-width: 768px) {
+  .form-check-input[type="radio"] {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+
+/*******************************
+
+
+
+
+
+
+
+
+
+****************************/
+
+.form-agendar-cita {
+  max-width: 600px;
+  /* Ancho máximo del formulario */
+  margin: 0 auto;
+  /* Centrar el formulario horizontalmente */
+  padding: 20px;
+  /* Espacio alrededor del formulario */
+  font-family: 'Poppins', sans-serif;
+  /* Tipo de letra */
+}
+
+.form-row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-data {
+  flex: 1;
+  position: relative;
+}
+
+.input-data input[type="text"],
+.input-data input[type="date"],
+.input-data input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  /* Línea inferior */
+  outline: none;
+  font-size: 16px;
+}
+
+.input-data label {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  color: #888;
+  transition: all 0.3s ease;
+}
+
+.input-data input[type="text"]:focus+label,
+.input-data input[type="date"]:focus+label,
+.input-data input[type="time"]:focus+label {
+  bottom: 25px;
+  /* Mover la etiqueta hacia arriba cuando se enfoca */
+  font-size: 12px;
+  /* Tamaño de la etiqueta cuando se enfoca */
+  color: #333;
+  /* Color de la etiqueta cuando se enfoca */
+}
+
+.submit-btn {
+  justify-content: flex-end;
+  /* Alinear el botón a la derecha */
+}
+
+.submit-btn input[type="button"] {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn input[type="button"]:hover {
+  background-color: #555;
+}
+
+.form-check-input[type="radio"] {
+  width: 30px;
+  /* Ancho del radio */
+  height: 30px;
+  /* Altura del radio */
+  margin-right: 10px;
+  /* Margen a la derecha para separar los radios */
+  background-color: #c7a17a;
+  /* Color de fondo café */
+  border: 2px solid #c7a17a;
+  /* Borde café */
+  border-radius: 50%;
+  /* Borde redondeado para hacer un círculo */
+  cursor: pointer;
+}
+
+.form-check-label {
+  font-size: 16px;
+  /* Tamaño de texto */
+}
+
+/* Para ajustar el tamaño de los radios en los dispositivos móviles */
+@media (max-width: 768px) {
+  .form-check-input[type="radio"] {
+    width: 25px;
+    /* Ancho reducido para dispositivos móviles */
+    height: 25px;
+    /* Altura reducida para dispositivos móviles */
   }
 }

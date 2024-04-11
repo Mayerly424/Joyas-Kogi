@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
 
 function Nav() {
     const [darkMode, setDarkMode] = useState(false);
@@ -81,24 +81,24 @@ function Nav() {
                 </div>
 
                 <div className="bottom-content">
-                    <ul>
-                        <li>
-                            <Link to="/Home" onClick={handleLogout}>
-                                <i className='bx bx-log-out icon'></i>
-                                <span className="text nav-text">Cerrar sesión</span>
-                            </Link>
-                        </li>
-                        <li className="mode">
-                            <div className="sun-moon">
-                                <i className={`bx bx-moon icon moon ${darkMode ? 'active' : ''}`}></i>
-                                <i className={`bx bx-sun icon sun ${!darkMode ? 'active' : ''}`}></i>
-                            </div>
-                            <span className="mode-text text">Modo oscuro</span>
-                            <div className={`toggle-switch ${darkMode ? 'dark-mode' : ''}`} onClick={toggleDarkMode}>
-                                <span className="switch"></span>
-                            </div>
-                        </li>
-                    </ul>
+                    <li>
+                        <a href="#" onClick={handleLogout}>
+                            <i className='bx bx-log-out icon'></i>
+                            <span className="text nav-text">Cerrar sesión</span>
+                        </a>
+                    </li>
+
+                    <li className="mode">
+                        <div className="sun-moon">
+                            <i className={`bx bx-moon icon moon ${darkMode ? 'active' : ''}`}></i>
+                            <i className={`bx bx-sun icon sun ${!darkMode ? 'active' : ''}`}></i>
+                        </div>
+                        <span className="mode-text text">Modo oscuro</span>
+
+                        <div className={`toggle-switch ${darkMode ? 'dark-mode' : ''}`} onClick={toggleDarkMode}>
+                            <span className="switch"></span>
+                        </div>
+                    </li>
                 </div>
             </div>
         </nav>

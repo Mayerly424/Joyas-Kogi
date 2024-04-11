@@ -1,0 +1,99 @@
+.perfil {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+}
+
+.sidebar header {
+    padding: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.image-text {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    margin-right: 10px;
+}
+
+.image img {
+    border-radius: 50%;
+    /* Establece el radio de borde para crear un círculo */
+    width: 50px;
+    /* Ajusta el tamaño de la imagen */
+    height: 50px;
+}
+
+.logo-text .name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo-text .profession {
+    font-size: 0.8rem;
+}
+
+.menu-bar {
+    padding: 20px;
+}
+
+.menu-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-links .nav-link {
+    margin-bottom: 10px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-links a:hover {
+    color: #ccc;
+}
+
+.menu-links .icon {
+    margin-right: 10px;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
+}
+
+.bottom-content {
+    position: absolute;
+    bottom: 0;
+}
+
+.bottom-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-content li {
+    margin-top: 20px;
+}
+
+.bottom-content .nav-text {
+    margin-left: 10px;
+}

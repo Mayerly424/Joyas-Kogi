@@ -9,23 +9,11 @@
 }
 
 :root {
-    /* ===== Colors ===== */
-    --primary-color: #c7a17a;
-    --panel-color: #FFF;
-    --text-color: #000;
-    --black-light-color: #707070;
-    --border-color: #e6e5e5;
-    --toggle-color: #DDD;
-    --box1-color: #94906b;
-    --box2-color: #FFE6AC;
-    --box3-color: #664c54;
-    --title-icon-color: #fff;
-
-    /* ====== Transition ====== */
-    --tran-05: all 0.5s ease;
-    --tran-03: all 0.3s ease;
-    --tran-03: all 0.2s ease;
+    --primary-color: #c7a17aa1;
+    --background-color: #f9f5f0;
+    --dark-color: #151515;
 }
+
 
 body {
     min-height: 100vh;
@@ -61,7 +49,7 @@ body.dark {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0b3cc1;
+    background: #f5f5f5;
 }
 
 body.dark::-webkit-scrollbar-thumb:hover,
@@ -76,7 +64,7 @@ nav {
     height: 100%;
     width: 250px;
     padding: 10px 14px;
-    background-color: var(--panel-color);
+    background-color: rgba(0, 0, 0, 0);
     border-right: 1px solid var(--border-color);
     transition: var(--tran-05);
 }
@@ -142,7 +130,7 @@ nav .menu-items {
     height: 5px;
     width: 5px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: black;
 }
 
 body.dark li a:hover:before {
@@ -156,13 +144,13 @@ body.dark li a:hover:before {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--black-light-color);
+    color: black;
 }
 
 .menu-items li a .link-name {
     font-size: 18px;
     font-weight: 400;
-    color: var(--black-light-color);
+    color: black;
     transition: var(--tran-05);
 }
 
@@ -320,9 +308,9 @@ nav.close~.dashboard .top {
     position: relative;
     height: 35px;
     width: 35px;
-    background-color: var(--primary-color);
+    background-color: #af8962;
     border-radius: 6px;
-    color: var(--title-icon-color);
+    color: #af8962;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -541,7 +529,7 @@ nav.close~.dashboard .top {
 
 .wrapper {
     width: 715px;
-    background: #fff;
+    background: #ddc9b3;
     border-radius: 5px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
     align-items: center;
@@ -707,3 +695,531 @@ form .button-area {
         text-align: center;
     }
 }
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    border-collapse: collapse;
+    /* Combina los bordes de las celdas */
+    margin-top: 20px;
+    /* Margen superior */
+}
+
+/* Estilos para las celdas de la tabla */
+th,
+td {
+    border: 1px solid #ddd;
+    /* Borde de 1px sólido con color gris claro */
+    padding: 8px;
+    /* Relleno interno de las celdas */
+    text-align: left;
+    /* Alineación del texto a la izquierda */
+}
+
+th {
+    background-color: #f2f2f2;
+    /* Color de fondo gris claro para las cabeceras */
+}
+
+/* Estilos para la imagen */
+.producto-imagen {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
+.circle-image {
+    width: 150px;
+    /* Tamaño del círculo */
+    height: 150px;
+    /* Tamaño del círculo */
+    border-radius: 50%;
+    /* Hace la imagen circular */
+    overflow: hidden;
+    /* Oculta cualquier contenido adicional que se salga del círculo */
+}
+
+.circular-img {
+    width: 100%;
+    /* Ajusta la imagen al tamaño del círculo */
+    height: 100%;
+    /* Ajusta la imagen al tamaño del círculo */
+}
+
+.description {
+    font: size 16px;
+    /* Tamaño de la descripción más grande */
+}
+
+/* Estilos para los botones de acción */
+table button {
+    padding: 10px 20px;
+    /* Relleno interno del botón */
+    margin-right: 10px;
+    /* Margen derecho entre los botones */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+}
+
+table button:hover {
+    background-color: #c7a17a;
+    /* Cambia el color de fondo al pasar sobre el botón */
+    color: #fff;
+    /* Cambia el color del texto al pasar sobre el botón */
+}
+
+
+
+/* Contactanos.css */
+
+/* Estilos generales */
+.Contactanos {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+.dash-content {
+    padding: 20px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title i {
+    margin-right: 10px;
+}
+
+.text {
+    font-size: 1.2em;
+}
+
+.body-contact {
+    padding: 20px;
+    background-color: #c7a17a87;
+
+    border-radius: 10px;
+}
+
+.container--modific {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+header {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    font-weight: bold;
+}
+
+.input-container input,
+.input-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-container select {
+    appearance: none;
+    background-color: transparent;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7 9l3 3 3-3" fill="%23666"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10 1a9 9 0 0 0-6.364 15.364l5.657 5.657A1 1 0 0 0 11.314 22H8v-2h4.879a1 1 0 0 0 .707-1.707l-5.657-5.657A7 7 0 1 1 10 1zm0 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" fill="%23666"/></svg>');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(199, 161, 122);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(199, 161, 122);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Colecciones.css */
+
+/* Estilos generales */
+/* Colecciones.css */
+
+/* Estilos generales */
+.colecciones {
+    margin-top: 20px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.title i {
+    margin-right: 10px;
+}
+
+.wrapper {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.wrapper header {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.field {
+    margin-bottom: 30px;
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+
+
+.field input[type="file"] {
+    display: block;
+    margin-top: 10px;
+}
+
+.field label {
+    margin-right: 10px;
+}
+
+.button-area {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.button-area button {
+    padding: 10px 20px;
+    background-color: #c7a17a;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-area button:hover {
+    background-color: #c7a17a;
+}
+
+.message textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+    /* Permite que el área de texto se redimensione verticalmente */
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.message textarea,
+.button-area button {
+    width: 300px;
+    /* Ajusta el ancho de los campos de entrada y el botón */
+}
+
+.wrapper form i {
+    position: absolute;
+    top: 50%;
+    left: -28px;
+    color: #ccc;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+
+
+
+
+/********************************
+
+
+
+
+
+
+
+
+****************************************/
+.Contactanos {
+    font-size: 20px;
+    /* Cambia el tamaño de la letra según tus preferencias */
+}
+
+.Contactanos .dash-content {
+    background-color: #dfcfbf87;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.Contactanos .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Contactanos .title i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.Contactanos .text {
+    font-size: 20px;
+}
+
+.Contactanos .body-contact {
+    margin-top: 20px;
+}
+
+.Contactanos .container--modific {
+    background-color: #dfcfbf87;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Contactanos header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Contactanos .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.Contactanos .input-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Contactanos .input-box i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.Contactanos .column {
+    display: flex;
+    flex-direction: column;
+}
+
+.Contactanos .address {
+    grid-column: span 2;
+}
+
+.Contactanos .select-box {
+    position: relative;
+}
+
+.Contactanos .select-box select {
+    appearance: none;
+    padding: 10px 30px 10px 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.Contactanos .select-box::after {
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.Contactanos button {
+    background-color: rgb(199, 161, 122);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Contactanos button:hover {
+    background-color: rgb(199, 161, 122);
+}
+
+.body-contact {
+    padding: 20px;
+    background-color: #dbcdbf87;
+    border-radius: 10px;
+}
+
+.Contactanos .container--modific {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Contactanos .form {
+    font-size: 18px;
+    /* Tamaño de letra más grande */
+}
+
+.Contactanos .input-box {
+    display: flex;
+    /* Usar flexbox para alinear elementos */
+    align-items: center;
+    /* Alinear verticalmente los elementos */
+    margin-bottom: 15px;
+    /* Espaciado inferior entre las cajas de entrada */
+}
+
+.Contactanos .input-box i {
+    margin-right: 10px;
+    /* Espaciado a la derecha del ícono */
+}
+
+.Contactanos .column {
+    display: flex;
+    /* Usar flexbox para alinear los elementos en columnas */
+    justify-content: space-between;
+    /* Distribuir uniformemente los elementos en el espacio disponible */
+}
+
+.Contactanos .column .input-box {
+    width: calc(50% - 10px);
+    /* Ancho del 50% menos el margen */
+}
+
+.Contactanos .address .input-box {
+    width: calc(100% - 30px);
+    /* Ancho del 100% menos el margen para la dirección */
+}
+
+/* Resto de tu CSS */
+
+
+
+
+
+
+
+
+/*****************
+
+
+
+
+
+
+
+
+
+
+*************************/
+
+.favoritos .card {
+    width: 300px;
+    /* Ancho del cuadro */
+    height: 400px;
+    /* Alto del cuadro */
+    border-radius: 10px;
+    /* Borde redondeado */
+    margin: 10px;
+    /* Margen entre los cuadros */
+    overflow: hidden;
+    /* Ocultar contenido que desborde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+}
+
+.favoritos .image-box img {
+    width: 100%;
+    /* Ancho de la imagen */
+    height: auto;
+    /* Altura automática para mantener la proporción */
+}
+
+.favoritos .profile-details {
+    padding: 15px;
+    /* Espaciado interno */
+}
+
+.favoritos .name {
+    margin-bottom: 5px;
+    /* Margen inferior para el nombre */
+    font-size: 20px;
+    /* Tamaño de la fuente del nombre */
+}
+
+.favoritos .job {
+    font-size: 16px;
+    /* Tamaño de la fuente del trabajo */
+}
+
+/* Estilos para los botones de navegación de Swiper */
+.swiper-navBtn {
+    font-size: 24px;
+    /* Tamaño de la fuente de los botones de navegación */
+}
+
+/* Resto de tu CSS */

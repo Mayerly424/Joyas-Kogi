@@ -1,43 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 
 const Section = ({ darkMode }) => {
-    // State para controlar la visibilidad de la barra lateral
-    const [showScrollbar, setShowScrollbar] = useState(false);
-
-    // Función para manejar el desplazamiento hacia abajo
-    const handleScrollDown = () => {
-        window.scrollTo({
-            top: window.pageYOffset + 100, // Ajusta el valor de desplazamiento según tus necesidades
-            behavior: 'smooth' // Desplazamiento suave
-        });
-    };
-
-    // Función para manejar el desplazamiento hacia arriba
-    const handleScrollUp = () => {
-        window.scrollTo({
-            top: window.pageYOffset - 100, // Ajusta el valor de desplazamiento según tus necesidades
-            behavior: 'smooth' // Desplazamiento suave
-        });
-    };
-
-    // Función para mostrar u ocultar la barra lateral según el desplazamiento
-    const handleScroll = () => {
-        if (window.pageYOffset > 0) {
-            setShowScrollbar(true);
-        } else {
-            setShowScrollbar(false);
-        }
-    };
-
-    // Agregar un event listener para el desplazamiento cuando el componente se monta
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
     const handleSave = () => {
         // Obtener referencias a los campos del formulario
         const tipoJoya = document.getElementById('tipoJoya');
@@ -232,26 +197,27 @@ const Section = ({ darkMode }) => {
     };
 
     return (
-        <section className="home">
-            {/* navbar */}
+        <section className={`home ${darkMode ? 'dark-mode' : ''}`}>
+            {/* Contenido de la sección */}
             <nav className="navbar">
                 <div className="logo_item">
                     {/*<i class="bx bx-menu" id="sidebarOpen"></i>
-       <img src="images/logo.png" alt=""></i>CodingNepal*/}
+    <img src="images/logo.png" alt=""></i>CodingNepal*/}
                 </div>
                 {/*<div class="search_bar">
-       <input type="text" placeholder="Search" />
-     </div>*/}
+    <input type="text" placeholder="Search" />
+  </div>*/}
                 <div className="navbar_content">
                     <i className="bx bx-grid" />
                     <i className="bx bx-bell" />
                     <img src="images/Persona10.jpg" alt className="profile" />
+
                 </div>
             </nav>
             <h1>Información en el perfil</h1>
             <div className="compras" id="compras">
                 <h2 className="heading-1"> <i className="bx bx-cart-alt icon"> Historial de compras</i></h2>
-                <style dangerouslySetInnerHTML={{ __html: "\n                       /* Estilos CSS */\n                       \n                       .Historial-ventas {\n                         max-width: 800px;\n                         margin: 0 auto;\n                       }\n                   \n                       .historial-ventas h1 {\n                         text-align: center;\n                       }\n                   \n                       .historial-ventas table {\n                         width: 100%;\n                         border-collapse: collapse;\n                         overflow-x: auto;\n                         margin: auto;\n                       }\n                   \n                       .Historial-ventas tr, th, td {\n                         padding: 8px;\n                         text-align: left;\n                         border-bottom: 1px solid #c7a17a;\n                       }\n                   \n                       \n                       button{\n                         margin-top: 20px;\n                         padding: 10px;\n                         background-color:  #c7a17a;\n                         border: none;\n                         border-radius: 5px;\n   \n                       }\n                     " }} />
+                <style dangerouslySetInnerHTML={{ __html: "\n                    /* Estilos CSS */\n                    \n                    .Historial-ventas {\n                      max-width: 800px;\n                      margin: 0 auto;\n                    }\n                \n                    .historial-ventas h1 {\n                      text-align: center;\n                    }\n                \n                    .historial-ventas table {\n                      width: 100%;\n                      border-collapse: collapse;\n                      overflow-x: auto;\n                      margin: auto;\n                    }\n                \n                    .Historial-ventas tr, th, td {\n                      padding: 8px;\n                      text-align: left;\n                      border-bottom: 1px solid #c7a17a;\n                    }\n                \n                    \n                    button{\n                      margin-top: 20px;\n                      padding: 10px;\n                      background-color:  #c7a17a;\n                      border: none;\n                      border-radius: 5px;\n\n                    }\n                  " }} />
                 <div className="Historial-ventas">
                     <h1>Historial de Compras</h1>
                     <div style={{ overflowX: 'auto' }}>
@@ -292,8 +258,8 @@ const Section = ({ darkMode }) => {
                         </table>
                     </div>
                     <div className="btn-table">
-                        <button onclick="exportToPDF()">Exportar a PDF</button>
-                        <button onclick="exportToCSV()">Exportar a CSV</button>
+                        <button onClick={exportToPDF}>Exportar a PDF</button>
+                        <button onClick={exportToCSV}>Exportar a CSV</button>
                     </div>
                 </div>
             </div>
@@ -393,12 +359,14 @@ const Section = ({ darkMode }) => {
                     </div>
                 </div>
             </div>
+
+
             <div className="joya" id="joya">
                 <h2 className="heading-1">
                     <i className="bx bx-edit-alt icon"> Personaliza tu joya</i>
                 </h2>
                 <section className="container--modific">
-                    <header>Personaliza tu joya</header>
+
                     <form action="#" className="form">
                         <div className="input-box">
                             <label>Tipo de joya</label>
@@ -457,71 +425,75 @@ const Section = ({ darkMode }) => {
                     </form>
                 </section>
             </div>
-            <div className="cita" id="cita">
-                <h2 className="heading-1"><i className='bx bx-calendar-plus icon' > Agenda una cita</i></h2>
-                <div className="container">
-                    <div className="title">Agenda tu cita</div>
-                    <div className="content">
-                        <form action="#">
-                            <div className="user-details">
-                                <div className="input-box">
-                                    <span className="details">Nombre completo</span>
-                                    <input type="text" id="nombre" placeholder="Ingrese su nombre completo" required />
+            <div class="cita" id="cita">
+                <h2 class="heading-1"><i class='bx bx-calendar-plus icon' > Agenda una cita</i></h2>
+                <div className="container--profile">
 
-                                </div>
-                                <div className="input-box">
-                                    <span className="details">Tipo de joya</span>
-                                    <input type="text" id="tipoJoya" placeholder="Ingrese el tipo de joya" required />
-                                </div>
-                                <div className="input-box">
-                                    <span className="details">Email</span>
-                                    <input type="text" id="email" placeholder="Ingrese su email" required />
-                                </div>
-                                <div className="input-box">
-                                    <span className="details">Numero de teléfono</span>
-                                    <input type="text" id="telefono" placeholder="Ingrese su numero de telefono" required />
-                                </div>
-                                <div className="input-box">
-                                    <span className="details">Fecha en que desea la cita</span>
-                                    <input type="date" id="fecha" placeholder="Ingrese la fecha" required />
-                                </div>
-                                <div className="input-box">
-                                    <span className="details">Hora en que desa la cita</span>
-                                    <input type="time" id="hora" placeholder="Ingrese la hora" required />
-                                </div>
+                    <form className='form-agendar-cita' action="#">
+                        <div className="form-row">
+                            <div className="input-data">
+                                <input type="text" id="nombrePerfil" required />
+                                <div className="underline"></div>
+                                <label>Nombre</label>
                             </div>
-                            <div className="gender-details">
-                                <span className="gender-title">Tipo de servicio</span>
-                                <div className="category">
-                                    <input type="radio" name="gender" id="dot-1" />
-                                    <label htmlFor="dot-1">
-                                        <span className="dot one"></span>
-                                        <span className="gender">Limpieza</span>
-                                    </label>
-                                    <input type="radio" name="gender" id="dot-2" />
-                                    <label htmlFor="dot-2">
-                                        <span className="dot two"></span>
-                                        <span className="gender">Mantenimiento</span>
-                                    </label>
-                                    <input type="radio" name="gender" id="dot-3" />
-                                    <label htmlFor="dot-3">
-                                        <span className="dot three"></span>
-                                        <span className="gender">Reparación</span>
-                                    </label>
-                                </div>
+                            <div className="input-data">
+                                <input type="text" id="Tipo de Joya" required />
+                                <div className="underline"></div>
+                                <label>Tipo de Joya</label>
                             </div>
-                            <div className="button">
-                                <input type="button" onClick={handleSchedule} value="Agendar cita" />
+                        </div>
+                        <div className="form-row">
+                            <div className="input-data">
+                                <input type="text" id="emailPerfil" required />
+                                <div className="underline"></div>
+                                <label>Email</label>
                             </div>
-                        </form>
-                    </div>
+                            <div className="input-data">
+                                <input type="text" id="telefonoPerfil" required />
+                                <div className="underline"></div>
+                                <label>Número de teléfono</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="input-data">
+                                <span className="details">Fecha en que desea la cita</span>
+                                <input type="Date" placeholder="Ingrese la fecha" required />
+                            </div>
+                            <div className="input-data">
+                                <span className="details">Hora en que desea la cita</span>
+                                <input type="time" placeholder="Ingrese la hora" required />
+                            </div>
+                        </div>
+                        <div>
+                            <div className="form-check form-check-inline">
+                                <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" defaultValue="option1" />
+                                <label className="form-check-label" htmlFor="inlineRadio1">Limpieza</label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                                <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" defaultValue="option2" />
+                                <label className="form-check-label" htmlFor="inlineRadio2">Mantenimiento</label>
+                            </div>
+                            <div className="form-check form-check-inline">
+                                <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" defaultValue="option3" />
+                                <label className="form-check-label" htmlFor="inlineRadio3">Reparación</label>
+                            </div>
+                        </div>
+
+
+                        <div className="form-row submit-btn">
+                            <div className="input-data">
+                                <div className="inner"></div>
+                                <input type="button" onClick={handleSaveChanges} value="Guardar cambios" />
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
 
             <div className="profil" id="profil">
                 <h2 className="heading-1"> <i className='bx bx-cog icon' > Edita los datos de tu perfil </i></h2>
                 <div className="container--profile">
-                    <div className="text">Edita tus datos</div>
+
                     <form action="#">
                         <div className="form-row">
                             <div className="input-data">

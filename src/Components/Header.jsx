@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 const Header = () => {
     const links = [
         { path: "/Home", label: "Inicio" },
-        { path: "/Colecciones", label: "Colecciones" },
         { path: "/Galeria", label: "Galeria" },
-        { path: "/Cuidado", label: "Cuidado" },
+        
         { path: "/Nosotros", label: "Nosotros" },
         { path: "/Iniciar_Sesion", label: "Iniciar Sesión" },
-        { path: "/Contactanos", label: "Contactanos" }
+       
     ];
 
     return (
@@ -21,7 +20,7 @@ const Header = () => {
                             <i className="fas fa-bars"></i>
                             <i className="fas fa-times"></i>
                         </div>
-                        <Link to="/Home" className="logo">JOYASKOGI</Link>
+                        <Link to="/Home" className="logo">GIMBOX</Link>
                         <ul className="nav-list">
                             {links.map(link => (
                                 <li className="nav-item" key={link.path}>
@@ -37,9 +36,9 @@ const Header = () => {
                     <h2 className="h2-sub">
                         <span className="fil">B</span>ienvenido
                     </h2>
-                    <h1 className="head">Joyeria Kogi</h1>
+                    <h1 className="head">GIM BOX</h1>
                     <div className="he-des">
-                        <h5>Expertos artesanos en diseño, desarrollo y produccion de accesorios de joyeria</h5>
+                        <h5>PON TU CUERPO Y PERSEVERANCIA A PRUEBA</h5>
                         <Link to="/Nosotros" className="btn cta-btn">Explora</Link>
                     </div>
                 </div>

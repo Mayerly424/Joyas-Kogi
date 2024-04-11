@@ -1,13 +1,15 @@
-
 import React from 'react';
 
-const PerfilAdmin = () => {
+import Nav from './PerfilAdmin/Nav';
+import Section from './PerfilAdmin/Section'
+
+const Perfil = () => {
     return (
-        <div className="perfil-admin">
-            <h2>Perfil de Administrador</h2>
-            {/* Aquí puedes agregar información y funcionalidades específicas para los administradores */}
+        <div>
+            <Nav />
+            <Section />
         </div>
     );
 };
 
-export default PerfilAdmin;
+export default Perfil;

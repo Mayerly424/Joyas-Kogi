@@ -4,87 +4,87 @@ import { Link } from "react-router-dom";
 // Definición de los productos
 export const productos = [
     {
-        nombre: "Collar",
-        precio: 4.60,
-        imagen: "images/IMG-20230321-WA0028.jpg",
-        descuento: 13,
+        nombre: "Bandas Elasticas",
+        precio: 32.594,
+        imagen: "images/bandaelastica.png",
+        descuento: 20,
         stars: [1, 1, 1, 1, 0]
     },
     {
-        nombre: "Collar hoja",
-        precio: 5.70,
-        imagen: "images/IMG-20230321-WA0017.jpg",
-        descuento: 22,
+        nombre: "Bicicleta estatica",
+        precio: 999.999,
+        imagen: "images/bicicletaestatica.jpg",
+        descuento: 12,
         stars: [1, 1, 1, 0, 0]
     },
     {
-        nombre: "Collar de hoja",
-        precio: 3.20,
-        imagen: "images/IMG-20230321-WA0015.jpg",
-        descuento: 13,
+        nombre: "Tapete",
+        precio: 32.999,
+        imagen: "images/tapete.jpg",
+        descuento: 20,
         stars: [1, 1, 1, 1, 1]
     },
     {
-        nombre: "Anillo de zafiro",
-        precio: 5.60,
-        imagen: "images/Anillobaige.jpg",
+        nombre: "Press de banca",
+        precio: 590.000,
+        imagen: "images/press.jpg",
         descuento: 13,
         stars: [1, 1, 1, 1, 0]
     },
     {
-        nombre: "Anillo perlado",
-        precio: 10.50,
-        imagen: "images/Anilloblanco.jpg",
-        descuento: 15,
+        nombre: "Prensa de pierna",
+        precio: 890.876,
+        imagen: "images/prensa.jpg",
+        descuento: 30,
         stars: [1, 1, 1, 1, 0]
     },
     {
-        nombre: "Anillo esmeralda",
-        precio: 8.90,
-        imagen: "images/Anillonegroconverde.jpg",
-        descuento: 10,
+        nombre: "Polea Cruzada",
+        precio: 888.999,
+        imagen: "images/Polea.jpg",
+        descuento: 19,
         stars: [1, 1, 1, 0, 0]
     },
     {
-        nombre: "Conjunto Hojal",
-        precio: 11.20,
-        imagen: "images/Combonaranja.jpg",
+        nombre: "Pesas de 2 kilos",
+        precio: 11.590,
+        imagen: "images/pesas_2_kilos.webp",
         descuento: 18,
         stars: [1, 1, 1, 1, 0]
     },
     {
-        nombre: "Conjunto perlado",
-        precio: 15.80,
-        imagen: "images/Conjunto.png",
-        descuento: 20,
+        nombre: "Maquina de aductor",
+        precio: 999.999,
+        imagen: "images/maquinaductor.webp",
+        descuento: 35,
         stars: [1, 1, 1, 0, 0]
     },
     {
-        nombre: "Conjunto Full plata",
-        precio: 20.00,
-        imagen: "images/Combopalta.jpg",
+        nombre: "Caminadora",
+        precio: 590.999,
+        imagen: "images/caminadora.jpg",
         descuento: 25,
         stars: [1, 1, 1, 0, 0]
     },
     {
-        nombre: "Pulcera dorada",
-        precio: 12.50,
-        imagen: "images/Piedranaranja.png",
+        nombre: "Maquina dorsalera",
+        precio: 123.50,
+        imagen: "images/dorsalera.jpg",
         descuento: 30,
         stars: [1, 1, 1, 1, 1]
     },
     {
-        nombre: "Pulcera tejida",
-        precio: 15.30,
-        imagen: "images/Manillaoro.jpg",
+        nombre: "Banco con espaldar",
+        precio: 950.308,
+        imagen: "images/banco.jpg",
         descuento: 20,
         stars: [1, 1, 1, 1, 0]
     },
     {
-        nombre: "Pulcera tejida en plata",
-        precio: 20.00,
-        imagen: "images/Manillapalata.png",
-        descuento: 25,
+        nombre: "Caja ",
+        precio: 20.590,
+        imagen: "images/caja.webp",
+        descuento: 50,
         stars: [1, 1, 1, 0, 0]
     }
 ];
